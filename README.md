@@ -3,7 +3,7 @@ A fast and simplified spannable string builder.
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.3.21-green.svg?style=flat-square)](http://kotlinlang.org)
 [![Spanly](https://img.shields.io/badge/Support-28.0.0-6ab344.svg?style=flat-square)](https://github.com/ReactiveX/RxJava/releases/tag/v2.1.10)
-[![Build Status](https://img.shields.io/travis/joshuadeguzman/Spanly.svg?style=flat-square)](https://travis-ci.org/joshuadeguzman/Spanly)
+[![Build Status](https://img.shields.io/travis/joshuadeguzman/Spanly.svg?style=flat-square)](https://travis-ci.com/joshuadeguzman/Spanly)
 [![GitHub (pre-)release](https://img.shields.io/github/release/joshuadeguzman/spanly/all.svg?style=flat-square)
 ](./../../releases)
 
