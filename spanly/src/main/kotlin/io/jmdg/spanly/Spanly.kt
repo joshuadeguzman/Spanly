@@ -1,7 +1,7 @@
 package io.jmdg.spanly
 
 import android.text.SpannableStringBuilder
-import io.jmdg.spanly.helpers.span
+import io.jmdg.spanly.internal.helpers.span
 
 /**
  * Created by Joshua de Guzman on 2/11/19.
