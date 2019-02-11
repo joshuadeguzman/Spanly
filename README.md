@@ -1,9 +1,8 @@
 # Spanly
 A fast and simplified spannable string builder.
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.3.21-green.svg?style=flat-square)](http://kotlinlang.org)
-[![Spanly](https://img.shields.io/badge/Support-28.0.0-6ab344.svg?style=flat-square)](https://github.com/ReactiveX/RxJava/releases/tag/v2.1.10)
-[![Build Status](https://img.shields.io/travis/joshuadeguzman/Spanly.svg?style=flat-square)](https://travis-ci.com/joshuadeguzman/Spanly)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.3.21-green.svg)](http://kotlinlang.org)
+[![Build Status](https://travis-ci.com/joshuadeguzman/Spanly.svg?branch=master)](https://travis-ci.com/joshuadeguzman/Spanly)
 [![GitHub (pre-)release](https://img.shields.io/github/release/joshuadeguzman/spanly/all.svg?style=flat-square)
 ](./../../releases)
 
@@ -13,9 +12,68 @@ A fast and simplified spannable string builder.
 
 ### Features
 
-- Simple
 - Fast
+- Simplified Spannable APIs
 - Lightweight
+
+### Demo
+
+A beautifully designed typography art made with Spanly!
+
+![demo-animated](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_animated.gif)
+
+### Usage
+
+```kotlin
+// MainActivity.kt
+// Design 1
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    // Render sample font
+    val fontAvenirBold = Typeface.createFromAsset(assets, "fonts/avenir_bold.ttc")
+    val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
+
+    // Sample usage
+    tvMessage.text =
+            Spanly()
+                    .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
+                    .space()
+                    .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
+                    .next()
+                    .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
+
+}
+
+```
+
+```kotlin
+// SubActivity.kt
+// Design 2
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setTheme(R.style.AppThemeViolet)
+    setContentView(R.layout.activity_sub)
+
+    // Render sample font
+    val fontAvenirBold = Typeface.createFromAsset(assets, "fonts/avenir_bold.ttc")
+    val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
+
+    // Sample usage
+    tvMessage.text =
+            Spanly()
+                    .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
+                    .space()
+                    .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
+                    .next()
+                    .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
+                    .next()
+                    .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+}
+```
 
 ### Installation
 
@@ -27,36 +85,6 @@ repositories {
 dependencies {
     // Replace version with release version, e.g. 1.0.0-alpha, -SNAPSHOT
     implementation 'io.jmdg:spanly:[VERSION]'
-}
-```
-
-### Usage
-
-```kotlin
-// MainActivity.kt
-
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-
-    // Sample usage
-    tvHelloWorld.text =
-         Spanly()
-             .append("The", italic())
-             .append(" ")
-             .append("Quick Brown", bold())
-             .append(" ")
-             .append("Fox", italic(), background(Color.YELLOW))
-             .append(" ")
-             .append("Jumps", bold(), strike(), sup(), italic())
-             .append(" ")
-             .append("Over", strike(), size(2f), bold())
-             .append(" ")
-             .append("The", strike(), underline())
-             .append(" ")
-             .append("Lazy", sup(), color(Color.BLUE))
-             .append(" ")
-             .append("Dog", underline())
 }
 ```
 
