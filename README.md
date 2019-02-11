@@ -37,13 +37,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
     val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
     // Sample usage
-    tvMessage.text =
-            Spanly()
-                    .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
-                    .space()
-                    .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
-                    .next()
-                    .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
+    tvMessage.text = Spanly()
+                .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
+                .space()
+                .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
+                .next()
+                .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
 
 }
 
@@ -63,15 +62,15 @@ override fun onCreate(savedInstanceState: Bundle?) {
     val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
     // Sample usage
-    tvMessage.text =
-            Spanly()
-                    .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
-                    .space()
-                    .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
-                    .next()
-                    .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
-                    .next()
-                    .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+    tvMessage.text = Spanly()
+            .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
+            .space()
+            .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
+            .next()
+            .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
+            .next()
+            .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+
 }
 ```
 
