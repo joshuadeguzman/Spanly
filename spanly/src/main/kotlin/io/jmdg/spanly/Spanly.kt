@@ -26,4 +26,14 @@ class Spanly : SpannableStringBuilder() {
         super.append(_text)
         return this
     }
+
+    fun space() : Spanly {
+        super.append(" ")
+        return this
+    }
+
+    fun next() : Spanly {
+        super.append("\n")
+        return this
+    }
 }

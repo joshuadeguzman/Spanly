@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.graphics.Typeface
 
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,22 +19,12 @@ class MainActivity : AppCompatActivity() {
         val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
         // Sample usage
-        tvHelloWorld.text =
-            Spanly()
-                .append("The", italic())
-                .append(" ")
-                .append("Quick Brown", bold())
-                .append(" ")
-                .append("Fox", italic(), background(Color.YELLOW))
-                .append(" ")
-                .append("Jumps", bold(), strike(), sup(), italic(), font(fontBrillianteRegular))
-                .append(" ")
-                .append("Over", strike(), size(2f), bold())
-                .append(" ")
-                .append("The", strike(), underline())
-                .append(" ")
-                .append("Lazy", sup(), color(Color.BLUE))
-                .append(" ")
-                .append("Dog", underline())
+        tvTalkIsCheap.text =
+                Spanly()
+                        .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
+                        .space()
+                        .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
+                        .next()
+                        .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
     }
 }

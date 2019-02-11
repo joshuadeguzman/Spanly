@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">@color/colorBlueLight</color>
+    <color name="colorPrimaryDark">@color/colorBlueDark</color>
+    <color name="colorAccent">@color/colorOrange</color>
+
+    <!-- Talk Is Cheap -->
+    <color name="colorOrange">#f4a60e</color>
+    <color name="colorBlueLight">#0880b4</color>
+    <color name="colorBlueDark">#1b2b43</color>
 </resources>
