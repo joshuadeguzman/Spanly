@@ -26,15 +26,14 @@ class SubActivity : AppCompatActivity() {
         val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
         // Sample usage
-        tvMessage.text =
-                Spanly()
-                        .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
-                        .space()
-                        .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
-                        .next()
-                        .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
-                        .next()
-                        .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+        tvMessage.text = Spanly()
+                .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
+                .space()
+                .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
+                .next()
+                .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
+                .next()
+                .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
 
         // Subscribe to button clicks
         tvMessage.setOnClickListener {
