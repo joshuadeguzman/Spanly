@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlueDark"
+    android:background="@color/colorVioletDark"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvMessage"
         android:layout_width="@dimen/background_width"
         android:layout_height="@dimen/background_height"
-        android:background="@drawable/background_rounded_dark_blue"
+        android:background="@drawable/background_rounded_dark_violet"
         android:clickable="true"
         android:elevation="30dp"
         android:focusable="true"
         android:gravity="center"
-        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -8,4 +8,8 @@
     <color name="colorOrange">#f4a60e</color>
     <color name="colorBlueLight">#0880b4</color>
     <color name="colorBlueDark">#1b2b43</color>
+
+    <!-- Show Me The Code -->
+    <color name="colorVioletLight">#492376</color>
+    <color name="colorVioletDark">#240e3b</color>
 </resources>
