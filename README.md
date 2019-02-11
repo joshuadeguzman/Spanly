@@ -18,6 +18,7 @@ A fast and simplified spannable string builder.
 - Lightweight
 
 ### Installation
+
 ```gradle
 repositories {
     maven { url "https://jitpack.io" }
