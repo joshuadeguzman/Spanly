@@ -28,6 +28,5 @@ class MainActivity : AppCompatActivity() {
             .append("Lazy", sup())
             .append(" ")
             .append("Dog", underline())
-            .build()
     }
 }
