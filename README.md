@@ -8,7 +8,7 @@ A fast and simplified spannable string builder.
 
 ### TODO's
 
-- On-going development for `Spans` object
+On-going development available at [Projects Section](https://github.com/joshuadeguzman/Spanly/projects/2).
 
 ### Features
 
