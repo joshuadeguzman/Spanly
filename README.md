@@ -20,8 +20,8 @@ A fast and simplified spannable string builder.
 
 A beautifully designed typography posters made with Spanly!
 
-![demo-one](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_1.png)
-![demo-two](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_2.png)
+![design-one](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/design_1.png)
+![design-two](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/design_2.png)
 
 ### Usage
 
