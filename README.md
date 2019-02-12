@@ -38,41 +38,38 @@ override fun onCreate(savedInstanceState: Bundle?) {
     val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
     // Sample usage
-    tvMessage.text = Spanly()
-                .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
-                .space()
-                .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
-                .next()
-                .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
-
-}
-
-```
-
-```kotlin
-// SubActivity.kt
-// Design 2
-
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setTheme(R.style.AppThemeViolet)
-    setContentView(R.layout.activity_sub)
-
-    // Render sample font
-    val fontAvenirBold = Typeface.createFromAsset(assets, "fonts/avenir_bold.ttc")
-    val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
-
-    // Sample usage
-    tvMessage.text = Spanly()
-            .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
+    tvMessage.text =
+        Spanly()
+            .append(
+                "TALK",
+                font(fontAvenirBold),
+                size(1.5f),
+                italic(),
+                clickable(View.OnClickListener {
+                    startActivity(Intent(this, SubActivity::class.java))
+                    finish()
+                }),
+                color(ContextCompat.getColor(this, R.color.colorOrange))
+            )
             .space()
-            .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
+            .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
             .next()
-            .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
-            .next()
-            .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+            .append(
+                "Cheap",
+                font(fontBrillianteRegular),
+                size(5f),
+                clickable(View.OnClickListener {
+                    startActivity(Intent(this, SubActivity::class.java))
+                    finish()
+                }),
+                color(ContextCompat.getColor(this, R.color.colorBlueLight))
+            )
 
+    // Important for the click to work
+    // More on https://developer.android.com/reference/android/text/method/LinkMovementMethod
+    tvMessage.movementMethod = LinkMovementMethod.getInstance()
 }
+
 ```
 
 ### Installation
