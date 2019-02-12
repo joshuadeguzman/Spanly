@@ -18,9 +18,10 @@ A fast and simplified spannable string builder.
 
 ### Demo
 
-A beautifully designed typography art made with Spanly!
+A beautifully designed typography posters made with Spanly!
 
-![demo-blue](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_blue.png)
+![demo-one](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_1.png)
+![demo-two](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_2.png)
 
 ### Usage
 
