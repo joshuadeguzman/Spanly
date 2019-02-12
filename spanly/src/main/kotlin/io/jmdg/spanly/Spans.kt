@@ -11,7 +11,6 @@ import io.jmdg.spanly.internal.spans.FontSpan
  */
 
 fun bold() = StyleSpan(Typeface.BOLD)
-
 fun italic() = StyleSpan(Typeface.ITALIC)
 fun underline() = UnderlineSpan()
 fun strike() = StrikethroughSpan()

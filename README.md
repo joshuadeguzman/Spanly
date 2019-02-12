@@ -23,6 +23,22 @@ Beautifully designed typography posters made with Spanly!
 ![design-one](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/design_1.png)
 ![design-two](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/design_2.png)
 
+### Spans
+
+| Spanly Spans                                                                |
+|-----------------------------------------------------------------------------|
+| bold()                                                                      |
+| italic()                                                                    |
+| underline()                                                                 |
+| strike()                                                                    |
+| sup()                                                                       |
+| sub()                                                                       |
+| background(color: Int)                                                      |
+| color(color: Int)                                                           |
+| size(size: Float)                                                           |
+| font(typeface: Typeface)                                                    |
+| clickable(listener: View.OnClickListener, isUnderlineText: Boolean = false) |
+
 ### Usage
 
 ```kotlin
