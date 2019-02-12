@@ -7,6 +7,9 @@ import android.os.Bundle
 import io.jmdg.spanly.*
 import kotlinx.android.synthetic.main.activity_main.*
 import android.graphics.Typeface
+import android.support.v4.content.ContextCompat
+import android.text.method.LinkMovementMethod
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,17 +22,35 @@ class MainActivity : AppCompatActivity() {
         val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
         // Sample usage
-        tvMessage.text = Spanly()
-                .append("TALK", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), italic())
+        tvMessage.text =
+            Spanly()
+                .append(
+                    "TALK",
+                    font(fontAvenirBold),
+                    size(1.5f),
+                    italic(),
+                    clickable(View.OnClickListener {
+                        startActivity(Intent(this, SubActivity::class.java))
+                        finish()
+                    }),
+                    color(ContextCompat.getColor(this, R.color.colorOrange))
+                )
                 .space()
                 .append("IS", font(fontAvenirBold), color(Color.WHITE), underline(), size(1.5f))
                 .next()
-                .append("Cheap", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorBlueLight)))
+                .append(
+                    "Cheap",
+                    font(fontBrillianteRegular),
+                    size(5f),
+                    clickable(View.OnClickListener {
+                        startActivity(Intent(this, SubActivity::class.java))
+                        finish()
+                    }),
+                    color(ContextCompat.getColor(this, R.color.colorBlueLight))
+                )
 
-        // Subscribe to button clicks
-        tvMessage.setOnClickListener {
-            startActivity(Intent(this, SubActivity::class.java))
-            finish()
-        }
+        // Important for the click to work
+        // More on https://developer.android.com/reference/android/text/method/LinkMovementMethod
+        tvMessage.movementMethod = LinkMovementMethod.getInstance()
     }
 }

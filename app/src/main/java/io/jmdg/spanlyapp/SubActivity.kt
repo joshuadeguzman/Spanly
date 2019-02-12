@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import io.jmdg.spanly.*
 import kotlinx.android.synthetic.main.activity_sub.*
@@ -26,14 +27,31 @@ class SubActivity : AppCompatActivity() {
         val fontBrillianteRegular = Typeface.createFromAsset(assets, "fonts/brilliante_regular.ttf")
 
         // Sample usage
-        tvMessage.text = Spanly()
-                .append("SHOW", font(fontAvenirBold), color(getColor(R.color.colorOrange)), size(1.5f), strike())
+        tvMessage.text =
+            Spanly()
+                .append(
+                    "SHOW",
+                    font(fontAvenirBold),
+                    color(ContextCompat.getColor(this, R.color.colorOrange)),
+                    size(1.5f),
+                    strike()
+                )
                 .space()
                 .append("ME", font(fontAvenirBold), color(Color.WHITE), italic(), size(1.5f))
                 .next()
-                .append("T    H    E", font(fontAvenirBold), color(getColor(R.color.colorVioletLight)), size(1.5f))
+                .append(
+                    "T    H    E",
+                    font(fontAvenirBold),
+                    color(ContextCompat.getColor(this, R.color.colorVioletLight)),
+                    size(1.5f)
+                )
                 .next()
-                .append("Code", font(fontBrillianteRegular), size(5f), color(getColor(R.color.colorVioletLight)))
+                .append(
+                    "Code",
+                    font(fontBrillianteRegular),
+                    size(5f),
+                    color(ContextCompat.getColor(this, R.color.colorVioletLight))
+                )
 
         // Subscribe to button clicks
         tvMessage.setOnClickListener {
