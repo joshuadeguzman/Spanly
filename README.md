@@ -20,7 +20,7 @@ A fast and simplified spannable string builder.
 
 A beautifully designed typography art made with Spanly!
 
-![demo-animated](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_animated.gif)
+![demo-blue](https://github.com/joshuadeguzman/Spanly/blob/master/screenshots/demo_blue.png)
 
 ### Usage
 
